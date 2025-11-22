@@ -1,0 +1,17 @@
+package restoran;
+
+public class Kuvar extends Zaposleni {
+    public Kuvar(int id, String ime, String prezime, double plataPoSatu, int ukupanBrojSati) {
+        super(id, ime, prezime, plataPoSatu, ukupanBrojSati);
+    }
+
+    @Override
+    public double izracunajPlatu() {
+        return 1500 + 4 * ukupanBrojSati * plataPoSatu;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " Kuvar " + ukupanBrojSati + " - " + izracunajPlatu();
+    }
+}
